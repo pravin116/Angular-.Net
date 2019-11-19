@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="form-group">
+            <label>First name</label>
+            <input type="text" class="form-control" [(ngModel)]="client.FirstName">
+        </div>
+        <div class="form-group">
+            <label>Last name</label>
+            <input type="text" class="form-control" [(ngModel)]="client.LastName">
+        </div>
+        <div class="form-group col-2">
+            <button class="btn btn-primary" type="submit" (click)="SearchDetail()">Search</button>
+        </div>
+        <app-result-table [SearchResult]="SearchResult"></app-result-table>
+    </div>
+</body>
+</html>

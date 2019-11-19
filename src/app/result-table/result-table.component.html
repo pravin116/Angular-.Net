@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Dob</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let clist of SearchResult">
+            <td>{{clist.id}}</td>
+            <td>{{clist.FirstName}}</td>
+            <td>{{clist.LastName}}</td>            
+            <td>{{clist.DOB}}</td>
+            <td *ngFor="let Aclist of clist.clientobj">{{Aclist.Address}}</td>
+        </tr>
+    </tbody>
+</table>
